@@ -1,5 +1,5 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: dimgray
 }
 
@@ -10,13 +10,36 @@ html, body {
   background-color: rgb(37, 37, 37);
 }
 
-main {
-  margin: auto;
-  width: 50%;
-  padding: 20px;
+#header {
+  position: relative;
+  text-align: right;
+  color:rgb(71, 71, 71);
+  font-size: 75px;
 }
 
-main > h1 {
+#header > a {
+  color:rgb(131, 131, 131)
+}
+
+.main {
+  position: relative;
+  height: auto;
+  width: auto;
+}
+
+.main > h1 {
   text-align: center;
   font-size: 3.5em;
+}
+
+#content {
+  margin: 5px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
