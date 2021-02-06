@@ -10,15 +10,14 @@
 
 <body>
   <main>
-    <p>Loading content from the API: [<b id="message">]</b></b></p>
+    <p>Loading content from the API:</p><p><b id="name">...</b></p>
     </main>
   </body>
 
   <script>
-    (async function () {
-      let response = await fetch(`api/message`);
-      let message = await response.json();
-
-      document.querySelector("#message").innerHTML = message.text
-    })();
-  </script></html>
+    (async function() {
+      let { text } = await( await fetch(`/api/message`)).json();
+      document.querySelector('#name').textContent = text;
+    }())
+  </script>
+</html>
