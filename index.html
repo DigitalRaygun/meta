@@ -10,8 +10,14 @@
 
 <body>
   <main>
-    <h1>meta</h1>
-  </main>
-</body>
+    <p>Loading content from the API:</p><p><b id="name">...</b></p>
+    </main>
+  </body>
 
+  <script>
+    (async function() {
+      let { text } = await( await fetch(`/api/message`)).json();
+      document.querySelector('#name').textContent = text;
+    }())
+  </script>
 </html>
