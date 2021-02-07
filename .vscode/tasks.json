@@ -6,27 +6,35 @@
 			"command": "host start",
 			"problemMatcher": "$func-node-watch",
 			"isBackground": true,
+			"options": {
+				"cwd": "${workspaceFolder}/api"
+			},
+			"dependsOn": "npm build"
+		},
+		{
+			"type": "shell",
+			"label": "npm build",
+			"command": "npm run build",
 			"dependsOn": "npm install",
 			"options": {
 				"cwd": "${workspaceFolder}/api"
-			}
+			},
+			"problemMatcher": "$tsc"
 		},
 		{
 			"type": "shell",
 			"label": "npm install",
-			"command": "npm install",
 			"options": {
 				"cwd": "${workspaceFolder}/api"
-			}
+			},
+			"command": "npm install"
 		},
 		{
 			"type": "shell",
 			"label": "npm prune",
 			"command": "npm prune --production",
-			"problemMatcher": [],
-			"options": {
-				"cwd": "${workspaceFolder}/api"
-			}
+			"dependsOn": "npm build",
+			"problemMatcher": []
 		}
 	]
 }
