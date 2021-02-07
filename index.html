@@ -25,9 +25,10 @@
 
   <script>
     (async function() {
-      let { text } = await(await fetch(`/api/message`)).json();
+      const baseUri = `https://api.digitalraygun.com/dns`;
+      let { response } = await(await fetch(`${baseUri}/entries?api=v1`)).json();
       //document.getElementById("name").innerHTML = html;
-      document.querySelector('#name').innerHTML = text; //.textContent = text;
+      document.querySelector('#name').innerHTML = response; //.textContent = text;
     }())
   </script>
 </html>
