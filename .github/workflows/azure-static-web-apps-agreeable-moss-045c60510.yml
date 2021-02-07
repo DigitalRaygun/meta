@@ -14,10 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Install Dependencies
     steps:
-      - name: libsecret-1
+      - name: libsecret-1-dev
         run: |
-          sudo apt install -y pkg-config
-          sudo apt install -y libsecret-1-0
+          sudo apt install -y libsecret-1-dev
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
