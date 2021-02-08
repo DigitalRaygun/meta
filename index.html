@@ -26,9 +26,16 @@
   <script>
     (async function() {
       const baseUri = `https://api.digitalraygun.com/dns`;
-      let { response } = await(await fetch(`${baseUri}/entries?api=v1`)).json();
+      const res = await(await fetch(`${baseUri}/entries?api=v1`)).json();
+      let output = '';
+      if (res.dnsMappings.length > 0) {
+          for (const dnsMapping of res.dnsMappings) {
+              output += ` | <a href="${dnsMapping.fqdn}" target="_blank">${dnsMapping.name}</a>`;
+          }
+      }
       //document.getElementById("name").innerHTML = html;
       document.querySelector('#name').innerHTML = response; //.textContent = text;
+
     }())
   </script>
 </html>
