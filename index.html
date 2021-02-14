@@ -10,16 +10,19 @@
 
 <body>
   <main>
-    <div class="flex-container">
-      <div id="header" style="flex-basis: 200px">
-          <a href="https://github.com/DigitalRaygun/meta">project</a>
+    <div id="header">
+      <div id="links">
+          <b id="entries">_</b>
       </div>
+      <div id="project">
+          <a href="https://github.com/DigitalRaygun">project</a>
+      </div>
+    </div>
 
       <div id="content">
         <p>Loading content from the API:</p>
-        <p><b id="name">...</b></p>
+        <b id="name">...</b>
       </div>
-    </div>
     </main>
   </body>
 
@@ -34,7 +37,7 @@
             output += ` | <a href="https://${entry.fqdn}" target="_blank">${entry.name}</a>`;
         }
         //document.getElementById("name").innerHTML = html;
-        document.querySelector('#name').innerHTML = output; //.textContent = text;
+        document.querySelector('#entries').innerHTML = output; //.textContent = text;
       }
 
     }())
