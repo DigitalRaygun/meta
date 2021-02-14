@@ -11,23 +11,19 @@ html, body {
 }
 
 #header {
-  position: relative;
-  text-align: right;
+  text-align: center;
   color:rgb(71, 71, 71);
   font-size: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #header > a {
-  color:rgb(131, 131, 131)
+  color:rgb(131, 131, 131);
 }
 
-.main {
-  position: relative;
-  height: auto;
-  width: auto;
-}
-
-.main > h1 {
+h1 {
   text-align: center;
   font-size: 3.5em;
 }
@@ -38,8 +34,10 @@ html, body {
   font-size: 50px;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.links {
+  flex: 1 1 auto;
+}
+
+.project {
+  flex: 1 1 auto;
 }
