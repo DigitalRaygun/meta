@@ -34,7 +34,7 @@
       if (dnsEntries) {
         let output = '';
         for (const entry of dnsEntries) {
-            output += ` | <a href="https://${entry.fqdn}" target="_blank">${entry.name}</a>`;
+            output += ` <a href="https://${entry.fqdn}" target="_blank">${entry.name}</a>`;
         }
         //document.getElementById("name").innerHTML = html;
         document.querySelector('#entries').innerHTML = output; //.textContent = text;
