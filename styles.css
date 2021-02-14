@@ -13,7 +13,7 @@ html, body {
 #header {
   text-align: center;
   color:rgb(71, 71, 71);
-  font-size: 75px;
+  font-size: 65px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,7 +35,6 @@ h1 {
 }
 
 .links {
-  font-size: 60px;
   flex: 1 1 auto;
 }
 
