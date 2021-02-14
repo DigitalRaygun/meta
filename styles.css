@@ -35,6 +35,7 @@ h1 {
 }
 
 .links {
+  font-size: 60px;
   flex: 1 1 auto;
 }
 
